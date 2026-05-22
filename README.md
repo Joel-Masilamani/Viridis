@@ -24,6 +24,7 @@ python -m venv .venv
 .\.venv\Scripts\Activate.ps1
 pip install -r requirements.txt
 Copy-Item .env.example .env
+alembic upgrade head
 ```
 
 Edit `backend/.env` and set `DATABASE_URL` for your local database.
