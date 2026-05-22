@@ -1,0 +1,46 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+!backend/.env.example
+!viridis-green-hub/.env.example
+
+# Python
+venv/
+.venv/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.ruff_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+
+# FastAPI / local database artifacts
+*.db
+*.sqlite
+*.sqlite3
+
+# Node / frontend
+node_modules/
+dist/
+build/
+.vite/
+.turbo/
+coverage/
+
+# Logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
