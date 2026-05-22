@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from typing import Optional, List
+from typing import Optional
 from datetime import date
 
 # ---------- HOSPITAL ----------
@@ -49,13 +49,13 @@ class EmissionBase(BaseModel):
     quantity: float
     unit: Optional[str] = None
     emission_factor: Optional[float] = None
-    co2e: float
 
 class EmissionCreate(EmissionBase):
-    pass
+    co2e: Optional[float] = None
 
 class EmissionRead(EmissionBase):
     id: int
+    co2e: float
 
 
     model_config = {

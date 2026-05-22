@@ -9,12 +9,14 @@ EMISSION_FACTORS = {
     # Add more as needed
 }
 
-def calculate_co2e(category: str, quantity: float, subcategory: str = "") -> float:
+def get_emission_factor(category: str, subcategory: str = "") -> float:
     key = category
-    # combine with subcategory if relevant
     if category == "biomedical":
         key = f"biomedical_{subcategory.lower()}"
-    factor = EMISSION_FACTORS.get(key, 0)
+    return EMISSION_FACTORS.get(key, 0)
+
+def calculate_co2e(category: str, quantity: float, subcategory: str = "") -> float:
+    factor = get_emission_factor(category, subcategory)
     return round(quantity * factor, 4)
 
 def calculate_sustainability_score(
