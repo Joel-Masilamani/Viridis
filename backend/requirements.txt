@@ -1,5 +1,14 @@
-# requirements.txt additions
-python-multipart  # For file uploads
-python-dotenv
-pydantic[email]
-alembic
+fastapi==0.119.0
+uvicorn[standard]==0.38.0
+
+SQLAlchemy==2.0.44
+alembic==1.17.0
+psycopg2-binary==2.9.10
+
+pydantic[email]==2.12.3
+python-dotenv==1.1.1
+python-multipart==0.0.20
+
+pandas==2.3.3
+numpy==2.3.4
+scikit-learn==1.7.2
